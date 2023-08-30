@@ -1,5 +1,10 @@
 with source as (
-  select * from
+  select 
+  distinct transaction_id
+, customer_id
+, transaction_date
+, amount  
+   from
   {{ ref('transactions') }}
 )
 , customers as (
