@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: int_transactions_pivoted_to_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null

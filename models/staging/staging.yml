@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: stg_customers
+    description: This is the staging customer model and contains customer details for all customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_transactions
+    description: This is the transaction model and includes all transactions made by customers in the customers model
+    columns:
+      - name: transaction_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+    

@@ -32,3 +32,10 @@ Please follow the guidelines below:
 - Please do not use external DBT packages
 - You may of course use any resources you like to assist you with specific techniques, syntax etc - but please do not just copy code.
 - Please don't share this exercise with anyone else :)
+
+## Instructions on how to run this DBT project and tests
+ - dbt seed 
+ - dbt run 
+ - dbt test 
+### Additional notes on tests 
+ - There are two custom tests testing data quality that throw warnings when they fail!
