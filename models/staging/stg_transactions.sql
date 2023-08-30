@@ -20,7 +20,7 @@ select
 from source s 
 -- exclude transactions that have no customer ids in the customers table
 join customers c 
-on s.customer_id = s.customer_id
+on c.customer_id = s.customer_id
 -- null customer_ids excluded
 where s.customer_id is not null)
 select * from renamed
