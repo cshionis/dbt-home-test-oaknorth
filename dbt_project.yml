@@ -36,3 +36,10 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
+      

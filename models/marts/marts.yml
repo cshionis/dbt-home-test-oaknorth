@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: customer_metrics
+    description: This is the customer model that consolidates customer information with their transactions
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: joined_date
+        description: This is the date a customer joined. If the date is null, we replace it with the first time they had a transaction.
+  - name: transactions_monthly
+    description: This model aggregates transaction metrics and tracks change over the last 12 months
+    columns:
+      - name: transaction_month
+        tests:
+          - unique
+          - not_null
